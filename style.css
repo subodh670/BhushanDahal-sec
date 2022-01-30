@@ -1,0 +1,793 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+html {
+  font-size: 16px;
+  /* width: 100%; */
+}
+.front-ui {
+  height: 110vh;
+  position: relative;
+}
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: blue;
+  color: white;
+  max-width: 100%;
+}
+.logo {
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: white;
+  border: 1px solid white;
+  padding: 5px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+nav ul li {
+  padding: 20px;
+  list-style: none;
+  font-size: 1.6rem;
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+nav ul li::after {
+  content: " ";
+  background-color: white;
+  width: 0;
+  display: block;
+  margin: auto;
+  height: 2px;
+  transition: 1s;
+}
+nav ul li:hover::after {
+  content: " ";
+  width: 100%;
+}
+
+.sec-nav {
+  display: flex;
+  justify-content: space-around;
+}
+.sec-nav li {
+  padding: 20px;
+  list-style: none;
+}
+.sec-nav li a {
+  text-decoration: none;
+}
+.hamburger {
+  display: none;
+}
+.close-btn {
+  display: none;
+}
+.introduce {
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
+  align-items: center;
+  background-color: blueviolet;
+  max-width: 100%;
+}
+.motto {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  /* position: relative; */
+  margin-left: 120px;
+  font-size: 1.3rem;
+  height: 100%;
+}
+.motto h1 {
+  margin: 10px;
+  font-size: 1.6rem;
+}
+.motto p {
+  margin: 10px;
+}
+.motto .sign {
+  margin: 10px;
+}
+.bckimage {
+  width: 50%;
+  background: url("dai.jpeg");
+  height: 90vh;
+
+  background-size: cover;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 50px;
+  color: white;
+}
+.bckimage:hover {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(245, 246, 252, 0.52),
+      rgba(117, 19, 93, 0.73)
+    ),
+    url("dai.jpeg");
+}
+.my-name {
+  transition: 1s;
+  font-weight: bold;
+}
+.my-name:hover {
+  background-color: green;
+  transition: 0.5s;
+  border-radius: 40px;
+  font-weight: bold;
+}
+.my-name-alone {
+  transition: 1s;
+}
+.my-name-alone:hover {
+  background-color: white;
+  transition: 0.5s;
+  border-radius: 40px;
+  color: black;
+}
+.time {
+  font-size: 40px;
+}
+.motto p {
+  font-size: 1.3rem;
+}
+.sign {
+  padding: 5px 15px;
+}
+
+/* cover start */
+.cover {
+  position: absolute;
+  width: 60%;
+  height: 70%;
+  top: 80px;
+  left: 240px;
+  margin: auto;
+  border: 1px solid black;
+  background-color: palegreen;
+  z-index: 100;
+  box-shadow: pink;
+  border-radius: 30px;
+}
+#cross {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px 20px;
+  font-size: 2.5rem;
+  background-color: palegreen;
+  border: 2px solid palegreen;
+  cursor: pointer;
+  color: blue;
+  border-radius: 40px;
+}
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin: auto;
+  /* border: 1px solid red; */
+}
+.pop-up {
+  display: none;
+}
+.unpop {
+  display: none;
+}
+.signin-form {
+  text-align: center;
+  position: relative;
+  top: 100px;
+  font-size: 1.3rem;
+}
+.signin-form h1 {
+  font-size: 1.6rem;
+}
+.signin-form input {
+  padding: 10px;
+}
+.padd {
+  padding: 10px;
+}
+.sec-nav li {
+  font-size: 1.3rem;
+}
+.close-btn {
+  display: none;
+}
+.personal {
+  height: auto;
+}
+.questions {
+  height: auto;
+  width: 60%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: auto;
+}
+.question {
+  height: auto;
+}
+.title {
+  display: inline;
+  background-color: whitesmoke;
+}
+.question button {
+  font-size: 20px;
+}
+.minus {
+  display: none;
+  transition: 0.5s;
+}
+.answer {
+  width: 60%;
+  text-align: center;
+  margin: auto;
+  font-size: 1.2rem;
+  background-color: rgb(194, 194, 192);
+  border-radius: 20px;
+  display: none;
+}
+.specific-question .answer {
+  display: block;
+}
+.center-question {
+  background-color: rgb(219, 218, 218);
+  height: auto;
+}
+.center-question button {
+  margin: 30px;
+}
+.specific-question .plus {
+  display: none;
+}
+.personal {
+  height: auto;
+}
+.personal {
+  height: auto;
+}
+.questions,
+.question {
+  height: 100vh;
+}
+.question button {
+  font-size: 12px;
+}
+.answer {
+  font-size: 1.1rem;
+}
+.title {
+  font-size: 1rem;
+}
+.receipes-done {
+  height: auto;
+  margin-top: 80px;
+}
+
+.receipe-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  font-size: 1.3rem;
+}
+.receipe-header p {
+  text-align: center;
+  width: 100%;
+  font-size: 30px;
+  font-weight: bold;
+}
+.receipe-header .underline {
+  width: 350px;
+  margin: auto;
+  background-color: chartreuse;
+  height: 2px;
+}
+.body-receipe {
+  width: 100%;
+  margin: 20px auto;
+}
+.body-receipe .button {
+  display: flex;
+  justify-content: center;
+}
+.button .menu-item {
+  margin: 10px;
+}
+.menu-center {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  height: auto;
+}
+.individual-menu {
+  width: 40%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid red; */
+  background-color: cornsilk;
+  box-shadow: 10px 10px 10px grey;
+  margin-bottom: 40px;
+}
+.receipe-photo {
+  max-width: 250px;
+}
+.desc .title {
+  font-weight: bolder;
+  text-decoration: underline;
+}
+.desc {
+  margin-bottom: 100px;
+}
+.desc .price {
+  font-weight: bolder;
+}
+.menu-item:hover {
+  background-color: blue;
+  color: white;
+}
+.name-receipe {
+  font-weight: bolder;
+}
+
+/* for tablet devices */
+@media (max-width: 809px) {
+  html {
+    font-size: 20px;
+  }
+  .front-ui {
+    height: auto;
+  }
+
+  .logo {
+    font-size: 1.6rem;
+  }
+  .introduce {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 200vh;
+    width: 100%;
+  }
+  .cover {
+    position: absolute;
+    width: 60%;
+    height: 80%;
+    top: 50px;
+    left: 80px;
+    margin: auto;
+    border: 1px solid black;
+    background-color: palegreen;
+    z-index: 100;
+    box-shadow: pink;
+  }
+  .motto {
+    width: 70%;
+    height: 92vh;
+    font-size: 12px;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    position: relative;
+    right: 80px;
+  }
+  .bckimage {
+    width: 100%;
+    height: 100vh;
+    display: block;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 50px;
+    color: white;
+  }
+  .hamburger {
+    display: block;
+    font-size: 1.6rem;
+  }
+  .header {
+    width: 100%;
+  }
+  .motto p {
+    margin: 0;
+  }
+  .motto .sign {
+    margin: 0;
+  }
+  .motto h1 {
+    margin: 0;
+    font-size: 1.6rem;
+  }
+  nav ul {
+    display: block;
+  }
+  .sec-nav {
+    display: none;
+  }
+  .toggle-nav {
+    display: none;
+    transition: 1s;
+  }
+  .close-btn {
+    display: none;
+    position: relative;
+    font-size: 30px;
+  }
+  .personal {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .questions {
+    height: auto;
+    width: 90%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .question {
+    height: auto;
+    width: 100%;
+  }
+  .title {
+    display: inline;
+    background-color: whitesmoke;
+    font-size: 0.5rem;
+  }
+  .question button {
+    font-size: 10px;
+  }
+  .minus {
+    display: none;
+    transition: 0.5s;
+  }
+  .answer {
+    width: 80%;
+    text-align: center;
+    /* margin: auto; */
+    font-size: 0.8rem;
+    background-color: rgb(194, 194, 192);
+    border-radius: 20px;
+    display: none;
+    transition: 1s;
+  }
+  .specific-question .answer {
+    display: block;
+    transition: 1s;
+  }
+  .center-question {
+    background-color: rgb(202, 200, 200);
+    width: 100%;
+    height: auto;
+  }
+  .center-question button {
+    margin: 30px;
+  }
+  .specific-question .plus {
+    display: none;
+  }
+  .receipes-done {
+    height: auto;
+    margin-top: 110px;
+  }
+
+  .receipe-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    font-size: 1.3rem;
+  }
+  .receipe-header p {
+    text-align: center;
+    width: 100%;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .receipe-header .underline {
+    width: 350px;
+    margin: auto;
+    background-color: chartreuse;
+    height: 2px;
+  }
+  .body-receipe {
+    width: 100%;
+    margin: 20px auto;
+  }
+  .body-receipe .button {
+    display: flex;
+    justify-content: center;
+  }
+  .button .menu-item {
+    margin: 10px;
+  }
+  .menu-center {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: auto;
+  }
+  .individual-menu {
+    width: 40%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: cornsilk;
+    box-shadow: 10px 10px 10px grey;
+  }
+  .receipe-photo {
+    max-width: 250px;
+  }
+  .desc .title {
+    font-weight: bolder;
+    text-decoration: underline;
+  }
+  .desc {
+    margin-bottom: 100px;
+  }
+  .desc .price {
+    font-weight: bolder;
+  }
+}
+
+/* for mobile devices */
+@media (max-width: 414px) {
+  html {
+    font-size: 20px;
+  }
+  .front-ui {
+    height: 210vh;
+  }
+  .cover {
+    position: absolute;
+    width: 60%;
+    height: 40%;
+    top: 50px;
+    left: 80px;
+    margin: auto;
+    border: 1px solid black;
+    background-color: palegreen;
+    z-index: 100;
+    box-shadow: pink;
+  }
+  .logo {
+    font-size: 1.6rem;
+  }
+  .introduce {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    position: relative;
+    z-index: 3;
+  }
+  .motto {
+    width: 70%;
+    height: 92vh;
+    font-size: 12px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    right: 40px;
+  }
+
+  .close-btn {
+    display: none;
+    position: relative;
+    font-size: 30px;
+    /* left: 60px; */
+  }
+  .bckimage {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(245, 246, 252, 0.52),
+        rgba(117, 19, 93, 0.73)
+      ),
+      url("dai.jpeg");
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 50px;
+    color: white;
+  }
+  .hamburger {
+    display: block;
+    font-size: 1.3rem;
+  }
+  .header {
+    width: 100%;
+  }
+  .motto p {
+    margin: 0;
+  }
+  .motto .sign {
+    margin: 0;
+  }
+  .motto h1 {
+    margin: 0;
+    font-size: 1.6rem;
+  }
+  .navigation ul {
+    width: 200px;
+    height: 100vh;
+  }
+  nav {
+    display: relative;
+    height: auto;
+    border: 1px solid black;
+  }
+  .navigation {
+    display: block;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    background-color: rgb(9, 9, 243);
+    opacity: 100%;
+    height: 90vh;
+    transition: 1s;
+    z-index: 4;
+  }
+  .toggle-nav {
+    transform: translate(-100%);
+    transition: 1s;
+  }
+  .personal {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .questions {
+    height: auto;
+    width: 90%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .question {
+    height: auto;
+    width: 100%;
+  }
+  .title {
+    display: inline;
+    background-color: whitesmoke;
+    font-size: 0.5rem;
+  }
+  .question button {
+    font-size: 10px;
+  }
+  .minus {
+    display: none;
+    transition: 0.5s;
+  }
+  .answer {
+    width: 80%;
+    text-align: center;
+    font-size: 0.8rem;
+    background-color: rgb(194, 194, 192);
+    display: none;
+    transition: 1s;
+  }
+  .specific-question .answer {
+    display: block;
+    transition: 1s;
+  }
+  .center-question {
+    background-color: rgb(202, 200, 200);
+    width: 100%;
+    height: auto;
+  }
+  .center-question button {
+    margin: 30px;
+  }
+  .specific-question .plus {
+    display: none;
+  }
+  .receipes-done {
+    height: auto;
+    margin-top: 110px;
+    width: 100%;
+  }
+
+  .receipe-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    font-size: 1.3rem;
+  }
+  .receipe-header p {
+    text-align: center;
+    width: 100%;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .receipe-header .underline {
+    width: 350px;
+    margin: auto;
+    background-color: chartreuse;
+    height: 2px;
+  }
+  .body-receipe {
+    width: 100%;
+    margin: 20px auto;
+  }
+  .body-receipe .button {
+    display: flex;
+    justify-content: center;
+  }
+  .button .menu-item {
+    margin: 10px;
+  }
+  .menu-center {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: auto;
+  }
+  .individual-menu {
+    flex-grow: 40%;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: cornsilk;
+    box-shadow: 10px 10px 10px grey;
+  }
+  .receipe-photo {
+    max-width: 250px;
+  }
+  .desc .title {
+    font-weight: bolder;
+    text-decoration: underline;
+    font-size: 1.3rem;
+  }
+  .desc {
+    margin-bottom: 100px;
+    flex-grow: 80%;
+    padding: 20%;
+  }
+  .desc .price {
+    font-weight: bolder;
+  }
+}
